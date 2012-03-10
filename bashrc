@@ -1,5 +1,5 @@
 export PATH="/usr/local/bin:$PATH:./node_modules/.bin"
-[[ -s "/Users/rellik/.rvm/scripts/rvm" ]] && source "/Users/rellik/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export MAGICK_HOME="/usr/local/ImageMagick"
 export PATH="$MAGICK_HOME/bin:$PATH"

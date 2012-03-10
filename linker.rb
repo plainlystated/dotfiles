@@ -4,8 +4,6 @@ working_dir = File.expand_path(File.dirname(__FILE__))
   bash_profile
   bashrc
   gnupg
-  npmrc
-  p
   rvmrc
   vim
   vimrc
