@@ -1,6 +1,7 @@
 Host bt-workstation
   Hostname 127.0.0.1
   Port 51322
-Host cronbox
-  Hostname ec2-23-20-79-217.compute-1.amazonaws.com
-  IdentityFile ~/.ssh/aws.pem
+Host cronbox-pinterest
+  Hostname ec2-23-20-79-51.compute-1.amazonaws.com
+Host cronbox-athene
+  Hostname ec2-107-21-176-98.compute-1.amazonaws.com

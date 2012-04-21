@@ -72,6 +72,16 @@ map <LocalLeader>aw :Ack '<C-R><C-W>'
 map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
+
+map <silent> <LocalLeader>vp :PromptVimTmuxCommand<CR>
+map <silent> <LocalLeader>vl :RunLastVimTmuxCommand<CR>
+map <silent> <LocalLeader>vi :InspectVimTmuxRunner<CR>
+map <silent> <LocalLeader>vx :CloseVimTmuxPanes<CR>
+map <silent> <LocalLeader>vs :InterruptVimTmuxRunner<CR>
+
+map <silent> <LocalLeader>mw :InterruptVimTmuxRunner<CR>
+map <silent> <LocalLeader>mw :call RunVimTmuxCommand("clear && cake mocha:watch")<CR>
+
 command Wsudo w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
 
@@ -133,3 +143,4 @@ command -range=% DivHtml :call DivHtml(<line1>,<line2>)
 
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 map <silent> <LocalLeader>rh :! tools/HardwareSimulator.sh %:p<CR>
+
