@@ -40,7 +40,7 @@ let g:gist_detect_filetype = 1
 
 let g:rubycomplete_buffer_loading = 1
 
-let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data"
+let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data,*.class"
 let g:fuzzy_ceiling = 50000
 let g:fuzzy_matching_limit = 10
 
