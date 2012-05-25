@@ -79,6 +79,8 @@ map <silent> <LocalLeader>vi :InspectVimTmuxRunner<CR>
 map <silent> <LocalLeader>vx :CloseVimTmuxPanes<CR>
 map <silent> <LocalLeader>vs :InterruptVimTmuxRunner<CR>
 
+map <silent> <LocalLeader>sc :call RunVimTmuxCommand("clear && fsc -deprecation " . @%)<CR>
+
 map <silent> <LocalLeader>mw :InterruptVimTmuxRunner<CR>
 map <silent> <LocalLeader>mw :call RunVimTmuxCommand("clear && cake mocha:watch")<CR>
 
