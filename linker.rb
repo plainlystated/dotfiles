@@ -5,6 +5,7 @@ working_dir = File.expand_path(File.dirname(__FILE__))
   bashrc
   gnupg
   rvmrc
+  tmux.conf
   vim
   vimrc
 ].each do |file|
