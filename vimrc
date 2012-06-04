@@ -79,7 +79,8 @@ map <silent> <LocalLeader>vi :InspectVimTmuxRunner<CR>
 map <silent> <LocalLeader>vx :CloseVimTmuxPanes<CR>
 map <silent> <LocalLeader>vs :InterruptVimTmuxRunner<CR>
 
-map <silent> <LocalLeader>sc :call RunVimTmuxCommand("clear && fsc -deprecation " . @%)<CR>
+map <silent> <LocalLeader>sc :wa<CR>:call RunVimTmuxCommand("clear && fsc -deprecation " . @%)<CR>
+map <silent> <LocalLeader>st :wa<CR>:let basename = split(@%, '\(Test\)\?\.scala')[0]<CR>:let scalatest_cp = " -cp /usr/lib/scalatest-1.7.2.jar "<CR>:call RunVimTmuxCommand("clear && fsc -deprecation " . scalatest_cp . basename . ".scala " . basename . "Test.scala && scala" . scalatest_cp . "org.scalatest.tools.Runner -p . -o -s RationalTest")<CR>
 
 map <silent> <LocalLeader>mw :InterruptVimTmuxRunner<CR>
 map <silent> <LocalLeader>mw :call RunVimTmuxCommand("clear && cake mocha:watch")<CR>
