@@ -3,6 +3,7 @@ working_dir = File.expand_path(File.dirname(__FILE__))
 %w[
   bash_profile
   bashrc
+  gitconfig
   gnupg
   rvmrc
   tmux.conf
