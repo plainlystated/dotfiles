@@ -4,7 +4,6 @@ working_dir = File.expand_path(File.dirname(__FILE__))
   bash_profile
   bashrc
   gitconfig
-  gnupg
   rvmrc
   tmux.conf
   vim
