@@ -99,7 +99,7 @@ if version >= 700
 endif
 
 if &t_Co == 256
-  colorscheme pablo
+  colorscheme vibrantink
 endif
 
 " Highlight trailing whitespace
@@ -147,3 +147,4 @@ command -range=% DivHtml :call DivHtml(<line1>,<line2>)
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 map <silent> <LocalLeader>rh :! tools/HardwareSimulator.sh %:p<CR>
 
+:set cursorline 
