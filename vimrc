@@ -31,6 +31,7 @@ let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
 
+
 let vimclojure#WantNailgun = 0
 let vimclojure#HighlightBuiltins = 1
 let vimclojure#ParenRainbow = 1
@@ -84,6 +85,8 @@ map <silent> <LocalLeader>st :wa<CR>:let basename = split(@%, '\(Test\)\?\.scala
 
 map <silent> <LocalLeader>mw :InterruptVimTmuxRunner<CR>
 map <silent> <LocalLeader>mw :call RunVimTmuxCommand("clear && cake mocha:watch")<CR>
+
+nnoremap <C-l> :NumbersToggle<CR>
 
 command Wsudo w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
