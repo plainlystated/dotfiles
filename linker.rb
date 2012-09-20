@@ -8,6 +8,8 @@ working_dir = File.expand_path(File.dirname(__FILE__))
   tmux.conf
   vim
   vimrc
+  oh-my-zsh
+  zshrc
 ].each do |file|
   cmd = "ln -s #{File.join(working_dir, file)} ~/.#{file}"
   puts cmd
