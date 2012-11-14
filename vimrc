@@ -86,8 +86,6 @@ map <silent> <LocalLeader>st :wa<CR>:let basename = split(@%, '\(Test\)\?\.scala
 map <silent> <LocalLeader>mw :InterruptVimTmuxRunner<CR>
 map <silent> <LocalLeader>mw :call RunVimTmuxCommand("clear && cake mocha:watch")<CR>
 
-nnoremap <C-l> :NumbersToggle<CR>
-
 command Wsudo w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
 
