@@ -19,3 +19,7 @@ end
 cmd = "ln -s #{File.join(working_dir, 'ssh_config')} ~/.ssh/config"
 puts cmd
 `#{cmd}`
+
+cmd = "ln -s #{File.join(working_dir, 'i3-config')} ~/.i3/config"
+puts cmd
+`#{cmd}`
