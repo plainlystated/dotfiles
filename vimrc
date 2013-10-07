@@ -2,7 +2,7 @@ set nocompatible
 syntax on
 
 filetype off
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 filetype plugin indent on
 
 compiler ruby
@@ -79,6 +79,10 @@ map <silent> <LocalLeader>vl :RunLastVimTmuxCommand<CR>
 map <silent> <LocalLeader>vi :InspectVimTmuxRunner<CR>
 map <silent> <LocalLeader>vx :CloseVimTmuxPanes<CR>
 map <silent> <LocalLeader>vs :InterruptVimTmuxRunner<CR>
+
+map <silent> <LocalLeader>rr :call VimuxRunCommand("clear; rake")<CR>
+map <silent> <LocalLeader>rt :call VimuxRunCommand("clear; rake test")<CR>
+map <silent> <LocalLeader>rc :call VimuxRunCommand("clear; rake console")<CR>
 
 map <silent> <LocalLeader>sc :wa<CR>:call RunVimTmuxCommand("clear && fsc -deprecation " . @%)<CR>
 map <silent> <LocalLeader>st :wa<CR>:let basename = split(@%, '\(Test\)\?\.scala')[0]<CR>:let scalatest_cp = " -cp /usr/lib/scalatest-1.7.2.jar "<CR>:call RunVimTmuxCommand("clear && fsc -deprecation " . scalatest_cp . basename . ".scala " . basename . "Test.scala && scala" . scalatest_cp . "org.scalatest.tools.Runner -p . -o -s RationalTest")<CR>
