@@ -27,15 +27,6 @@ set smartcase
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
 
-let html_use_css=1
-let html_number_lines=0
-let html_no_pre=1
-
-
-let vimclojure#WantNailgun = 0
-let vimclojure#HighlightBuiltins = 1
-let vimclojure#ParenRainbow = 1
-
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 
@@ -84,19 +75,14 @@ map <silent> <LocalLeader>rr :call VimuxRunCommand("clear; rake")<CR>
 map <silent> <LocalLeader>rt :call VimuxRunCommand("clear; rake test")<CR>
 map <silent> <LocalLeader>rc :call VimuxRunCommand("clear; rake console")<CR>
 
-map <silent> <LocalLeader>sc :wa<CR>:call RunVimTmuxCommand("clear && fsc -deprecation " . @%)<CR>
-map <silent> <LocalLeader>st :wa<CR>:let basename = split(@%, '\(Test\)\?\.scala')[0]<CR>:let scalatest_cp = " -cp /usr/lib/scalatest-1.7.2.jar "<CR>:call RunVimTmuxCommand("clear && fsc -deprecation " . scalatest_cp . basename . ".scala " . basename . "Test.scala && scala" . scalatest_cp . "org.scalatest.tools.Runner -p . -o -s RationalTest")<CR>
-
-map <silent> <LocalLeader>mw :InterruptVimTmuxRunner<CR>
-map <silent> <LocalLeader>mw :call RunVimTmuxCommand("clear && cake mocha:watch")<CR>
+let g:rspec_command = "!bundle exec bin/rspec {spec}"
+map <silent> <LocalLeader>sf :call RunCurrentSpecFile()<CR>
+map <silent> <LocalLeader>sn :call RunNearestSpec()<CR>
+map <silent> <LocalLeader>sl :call RunLastSpec()<CR>
+map <silent> <LocalLeader>sa :call RunAllSpecs()<CR>
 
 command Wsudo w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
-
-map <silent> <LocalLeader>am :!make<CR>
-map <silent> <LocalLeader>ac :!make clean<CR>
-map <silent> <LocalLeader>au :!make upload<CR>
-map <silent> <LocalLeader>aa :!make && make upload<CR>
 
 if version >= 700
     autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
