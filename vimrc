@@ -153,3 +153,13 @@ autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 map <silent> <LocalLeader>rh :! tools/HardwareSimulator.sh %:p<CR>
 
 :set cursorline 
+
+nmap <silent> <leader>sn :TestNearest<CR>
+nmap <silent> <leader>sf :TestFile<CR>
+nmap <silent> <leader>ss :TestSuite<CR>
+nmap <silent> <leader>sl :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
+call plug#begin()
+Plug 'janko-m/vim-test'
+call plug#end()

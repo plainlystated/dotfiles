@@ -4,3 +4,74 @@ Host bt-workstation
   Port 51322
 Host cronbox-pinterest
   Hostname ec2-23-20-79-51.compute-1.amazonaws.com
+
+Host *-app *app* *pg*
+  User patrick
+  ProxyCommand ssh bastion -W %h:%p
+
+
+Host dash
+  Hostname 54.164.97.226
+Host monitor
+  Hostname 52.23.217.214
+Host dee-prod-app app-f6x.production.dee.lcp
+  Hostname 10.100.2.93
+Host lcp-edge-app app-8bg.demo.lcp.lcp
+  Hostname 10.100.0.131
+Host ch-prod-app app-ca2.production.ch.lcp
+  Hostname 10.100.2.251
+Host gss-prod-app app-ex2.production.gss.lcp
+  Hostname 10.100.2.163
+Host gv-prod-app app-a3w.production.gv.lcp
+  Hostname 10.100.1.82
+Host jcm-prod-app app-n5w.production.jcm.lcp
+  Hostname 10.100.3.113
+Host ld-prod-app app-4ak.production.ld.lcp
+  Hostname 10.100.2.222
+Host mca-prod-app app-t45.production.mca.lcp
+  Hostname 10.100.3.188
+Host mca-prod-pg
+  Hostname 10.100.2.88
+Host mchp-prod-app app-m2u.production.mchp.lcp
+  Hostname 10.100.3.72
+Host mr-prod-app app-q6i.production.mr.lcp
+  Hostname 10.100.0.24
+Host pnj-prod-app app-w5n.production.pnj.lcp
+  Hostname 10.100.3.47
+Host rche-prod-app app-nhe.production.rche.lcp
+  Hostname 10.100.2.64
+
+Host lcp-edge-pg
+  Hostname 10.100.0.182
+Host ch-prod-pg
+  Hostname 10.100.3.68
+Host dee-prod-pg
+  Hostname 10.100.2.94
+Host gss-prod-pg
+  Hostname 10.100.0.231
+Host gv-prod-pg
+  Hostname 10.100.2.145
+Host jcm-prod-pg
+  Hostname 10.100.1.0
+Host ld-prod-pg
+  Hostname 10.100.3.13
+Host mca-prod-pg
+  Hostname 10.100.2.88
+Host mchp-prod-pg
+  Hostname 10.100.3.129
+Host mr-prod-pg
+  Hostname 10.100.3.119
+Host pnj-prod-pg
+  Hostname 10.100.3.160
+Host rche-prod-pg
+  Hostname 10.100.0.106
+
+Host firebird
+  Hostname 10.100.3.150
+  User patrick
+  ProxyCommand ssh bastion -W %h:%p
+
+Host bastion
+  Hostname 52.70.158.82
+  IdentityFile ~/.ssh/id_rsa.aws
+  User admin

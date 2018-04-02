@@ -16,3 +16,6 @@
   unstaged = diff
 [push]
   default = current
+[user]
+	email = patrick.schless@gmail.com
+	name = Patrick Schless
