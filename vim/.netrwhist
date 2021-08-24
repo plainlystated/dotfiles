@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/rellik/repos/Arduino/Thermostat/config'
-let g:netrw_dirhist_2='/Users/rellik/repos/ampsive/.git'
-let g:netrw_dirhist_3='/Users/rellik/.ssh'
-let g:netrw_dirhist_4='/Users/rellik/.oh-my-zsh'
-let g:netrw_dirhist_5='/Users/rellik/repos/puppet'
-let g:netrw_dirhist_6='/Users/rellik/tempodb-secrets/TLS/CA/serial'
