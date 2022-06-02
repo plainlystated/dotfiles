@@ -211,6 +211,10 @@ function! go#config#DebugWindows() abort
 
 endfunction
 
+function! go#config#DebugPreserveLayout() abort
+  return get(g:, 'go_debug_preserve_layout', 0)
+endfunction
+
 function! go#config#DebugAddress() abort
   return get(g:, 'go_debug_address', '127.0.0.1:8181')
 endfunction
@@ -307,7 +311,7 @@ function! go#config#FmtAutosave() abort
 endfunction
 
 function! go#config#ImportsAutosave() abort
-  return get(g:, 'go_imports_autosave', 0)
+  return get(g:, 'go_imports_autosave', 1)
 endfunction
 
 function! go#config#SetFmtAutosave(value) abort
@@ -351,11 +355,11 @@ function! go#config#DeclsMode() abort
 endfunction
 
 function! go#config#FmtCommand() abort
-  return get(g:, "go_fmt_command", "gofmt")
+  return get(g:, "go_fmt_command", go#config#GoplsEnabled() ? 'gopls' : 'gofmt')
 endfunction
 
 function! go#config#ImportsMode() abort
-  return get(g:, "go_imports_mode", "goimports")
+  return get(g:, "go_imports_mode", go#config#GoplsEnabled() ? 'gopls' : 'goimports')
 endfunction
 
 function! go#config#FmtOptions() abort
@@ -380,7 +384,7 @@ function! go#config#RenameCommand() abort
 endfunction
 
 function! go#config#GorenameBin() abort
-  return get(g:, "go_gorename_bin", "gopls")
+  return get(g:, "go_gorename_bin", 'gopls')
 endfunction
 
 function! go#config#GorenamePrefill() abort
