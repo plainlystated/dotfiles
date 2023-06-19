@@ -38,6 +38,8 @@ end
 link_file(File.join(working_dir, 'ssh_config'), "~/.ssh/config")
 
 link_file(File.join(working_dir, 'i3_config'), "~/.config/i3/config")
+link_file(File.join(working_dir, 'PrusaSlicer'), "~/.config/PrusaSlicer")
+link_file(File.join(working_dir, 'PrusaSlicer-alpha'), "~/.config/PrusaSlicer-alpha")
 
 #cmd = "ln -s #{File.join(working_dir, 'i3-config')} ~/.i3/config"
 #puts cmd
