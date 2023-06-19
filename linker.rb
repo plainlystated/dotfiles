@@ -1,7 +1,28 @@
+require 'fileutils'
+
 working_dir = File.expand_path(File.dirname(__FILE__))
 
-  #oh-my-zsh
-  #zshrc
+def link_file(repo_path, os_path)
+  os_path = File.expand_path(os_path)
+  if File.symlink?(os_path)
+    if ENV['FORCE'] == "1"
+      puts "(FORCING) deleting old file at #{os_path}"
+      FileUtils.rm(os_path)
+    else
+      puts "Skipping (exists) #{os_path}"
+      return
+    end
+  end
+
+  if File.exist?(os_path)
+    puts "Creating backup of #{os_path}"
+    FileUtils.mv(os_path, os_path + ".0")
+  end
+
+  puts "Linking #{os_path} -> #{repo_path}"
+  FileUtils.ln_s(repo_path, os_path)
+end
+
 %w[
   bash_profile
   bashrc
@@ -11,14 +32,12 @@ working_dir = File.expand_path(File.dirname(__FILE__))
   vim
   vimrc
 ].each do |file|
-  cmd = "ln -s #{File.join(working_dir, file)} ~/.#{file}"
-  puts cmd
-  `#{cmd}`
+  link_file(File.join(working_dir, file), "~/.#{file}")
 end
 
-cmd = "ln -s #{File.join(working_dir, 'ssh_config')} ~/.ssh/config"
-puts cmd
-`#{cmd}`
+link_file(File.join(working_dir, 'ssh_config'), "~/.ssh/config")
+
+link_file(File.join(working_dir, 'i3_config'), "~/.config/i3/config")
 
 #cmd = "ln -s #{File.join(working_dir, 'i3-config')} ~/.i3/config"
 #puts cmd
