@@ -41,6 +41,7 @@ link_file(File.join(working_dir, 'i3_config'), "~/.config/i3/config")
 link_file(File.join(working_dir, 'PrusaSlicer'), "~/.config/PrusaSlicer")
 link_file(File.join(working_dir, 'PrusaSlicer-alpha'), "~/.config/PrusaSlicer-alpha")
 link_file(File.join(working_dir, 'kicad'), "~/.config/kicad")
+link_file(File.join(working_dir, 'nvim'), "~/.config/nvim")
 
 #cmd = "ln -s #{File.join(working_dir, 'i3-config')} ~/.i3/config"
 #puts cmd
