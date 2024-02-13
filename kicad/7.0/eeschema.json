@@ -3,7 +3,7 @@
     "automatic": true,
     "messages_filter": 29,
     "method": 0,
-    "options": 0,
+    "options": 1,
     "recursive": true,
     "scope": 0,
     "sort_order": 0
@@ -103,11 +103,15 @@
   "field_editor": {
     "column_widths": {},
     "fields_group_by": {},
-    "fields_show": {}
+    "fields_show": {
+      "Reference": true
+    }
   },
   "find_replace": {
-    "find_history": [],
-    "find_string": "",
+    "find_history": [
+      "1"
+    ],
+    "find_string": "1",
     "match_case": false,
     "match_mode": 0,
     "replace_history": [],
@@ -138,17 +142,17 @@
     ]
   },
   "lib_view": {
-    "cmp_list_width": 150,
-    "lib_list_width": 150,
+    "cmp_list_width": 300,
+    "lib_list_width": 200,
     "show_pin_electrical_type": true,
     "window": {
       "display": 0,
       "maximized": false,
-      "perspective": "layout2|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=630;besth=38;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=3;layer=6;row=0;pos=0;prop=100000;bestw=400;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Libraries;caption=;state=1020;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=200;besth=-1;minw=100;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Symbols;caption=;state=1020;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=300;besth=-1;minw=100;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=194;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(1,6,0)=38|dock_size(3,6,0)=34|dock_size(4,2,0)=152|dock_size(4,1,0)=152|dock_size(5,0,0)=150|",
-      "pos_x": 677,
-      "pos_y": 323,
-      "size_x": 1052,
-      "size_y": 937
+      "perspective": "layout2|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=630;besth=38;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=3;layer=6;row=0;pos=0;prop=100000;bestw=400;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Libraries;caption=;state=1020;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=200;besth=-1;minw=100;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Symbols;caption=;state=1020;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=300;besth=-1;minw=100;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=194;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(1,6,0)=38|dock_size(3,6,0)=34|dock_size(4,2,0)=202|dock_size(4,1,0)=302|dock_size(5,0,0)=382|",
+      "pos_x": 1280,
+      "pos_y": 0,
+      "size_x": 1276,
+      "size_y": 1556
     }
   },
   "meta": {
@@ -221,22 +225,25 @@
     "keep_symbol": false,
     "place_all_units": true,
     "sash_pos_h": 440,
-    "sash_pos_v": -1,
+    "sash_pos_v": 489,
     "width": 780
   },
   "system": {
     "file_history": [
+      "/home/patrick/Dropbox/electronics/esp12f test/esp12f test/esp12f test.kicad_sch",
+      "/home/patrick/Dropbox/electronics/usb_micro_breakout/usb_micro_breakout.kicad_sch",
+      "/home/patrick/Dropbox/electronics/christmas tree/christmas tree.kicad_sch",
+      "/home/patrick/Dropbox/electronics/bus pirate breakout/bus pirate breakout/bus pirate breakout.kicad_sch",
+      "/home/patrick/Dropbox/electronics/esp32 pillminder/esp32 pillminder.kicad_sch",
       "/home/patrick/Dropbox/electronics/desk lift lights/desk lift lights.kicad_sch",
       "/home/patrick/Dropbox/electronics/esp32 wled/esp32 wled.kicad_sch",
-      "/home/patrick/Dropbox/electronics/esp32 pillminder/esp32 pillminder.kicad_sch",
       "/home/patrick/Dropbox/electronics/cap latch/cap latch.kicad_sch",
-      "/home/patrick/Dropbox/electronics/esp32 pillminder/esp32 wled/esp32 wled.kicad_sch",
-      "/home/patrick/Dropbox/electronics/basic traffic lights/basic traffic lights.kicad_sch"
+      "/home/patrick/Dropbox/electronics/esp32 pillminder/esp32 wled/esp32 wled.kicad_sch"
     ],
     "first_run_shown": false,
     "last_imperial_units": 0,
     "last_metric_units": 1,
-    "last_symbol_lib_dir": "/home/patrick/Dropbox/electronics/kicad_libraries/ESP32_devkit_38pin_2",
+    "last_symbol_lib_dir": "/home/patrick/Dropbox/electronics/kicad_libraries/usb_c_recpt_CU3216SASBLR004",
     "max_undo_items": 0,
     "never_show_rescue_dialog": false,
     "units": 1

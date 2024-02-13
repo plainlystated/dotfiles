@@ -10,7 +10,9 @@
     "properties_panel_width": 20,
     "properties_splitter_proportion": 0.5,
     "right_panel_width": 180,
+    "search_panel_dock_direction": 3,
     "search_panel_height": 250,
+    "search_panel_width": 360,
     "show_layer_manager": true,
     "show_properties": false,
     "show_search": false
@@ -34,9 +36,9 @@
   },
   "drc_dialog": {
     "refill_zones": true,
-    "severities": 24,
+    "severities": 16,
     "test_all_track_errors": false,
-    "test_footprints": false
+    "test_footprints": true
   },
   "editing": {
     "allow_free_pads": false,
@@ -72,7 +74,9 @@
   },
   "export_svg": {
     "black_and_white": false,
-    "layers": [],
+    "layers": [
+      44
+    ],
     "mirror": false,
     "one_file": false,
     "output_dir": "",
@@ -152,11 +156,11 @@
     "maximized": false,
     "mru_path": "",
     "perspective": "layout2|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=760;besth=38;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=OptToolbar;caption=;state=139596;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=34;besth=410;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=3;layer=6;row=0;pos=0;prop=100000;bestw=400;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Libraries;caption=;state=1020;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=200;besth=-1;minw=100;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Footprints;caption=;state=1020;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=300;besth=-1;minw=100;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=194;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(1,6,0)=38|dock_size(4,3,0)=34|dock_size(3,6,0)=34|dock_size(4,2,0)=202|dock_size(4,1,0)=302|dock_size(5,0,0)=402|",
-    "pos_x": 2560,
+    "pos_x": 1920,
     "pos_y": 0,
-    "size_x": 1276,
-    "size_y": 1561,
-    "zoom": 13.49049755464448,
+    "size_x": 1916,
+    "size_y": 1556,
+    "zoom": 11.092523797999322,
     "zoom_factors": []
   },
   "footprint_wizard": {
@@ -233,7 +237,7 @@
   "import_graphics": {
     "dxf_units": 0,
     "interactive_placement": true,
-    "layer": 40,
+    "layer": 37,
     "line_width": 0.2,
     "line_width_units": 0,
     "origin_units": 0,
@@ -254,7 +258,7 @@
     "version": 5
   },
   "netlist": {
-    "associate_by_ref_sch": false,
+    "associate_by_ref_sch": true,
     "delete_extra_footprints": true,
     "delete_shorting_tracks": false,
     "report_filter": 29,
@@ -334,16 +338,19 @@
   },
   "system": {
     "file_history": [
-      "/home/patrick/Dropbox/electronics/desk lift lights/desk lift lights.kicad_pcb",
+      "/home/patrick/Dropbox/electronics/esp12f test/esp12f test/esp12f test.kicad_pcb",
+      "/home/patrick/Dropbox/electronics/usb_micro_breakout/usb_micro_breakout.kicad_pcb",
       "/home/patrick/Dropbox/electronics/esp32 wled/esp32 wled.kicad_pcb",
+      "/home/patrick/Dropbox/electronics/christmas tree/christmas tree.kicad_pcb",
+      "/home/patrick/Dropbox/electronics/breadboard power/breadboard power.kicad_pcb",
+      "/home/patrick/Dropbox/electronics/bus pirate breakout/bus pirate breakout/bus pirate breakout.kicad_pcb",
       "/home/patrick/Dropbox/electronics/esp32 pillminder/esp32 pillminder.kicad_pcb",
-      "/home/patrick/Dropbox/electronics/esp32 pillminder/esp32 wled/esp32 wled.kicad_pcb",
-      "/home/patrick/Dropbox/electronics/basic traffic lights/basic traffic lights.kicad_pcb",
-      "/home/patrick/Dropbox/electronics/basic traffic lights/esp32 wled/esp32 wled.kicad_pcb"
+      "/home/patrick/Dropbox/electronics/desk lift lights/desk lift lights.kicad_pcb",
+      "/home/patrick/Dropbox/electronics/esp32 pillminder/esp32 wled/esp32 wled.kicad_pcb"
     ],
     "first_run_shown": false,
     "last_footprint3d_dir": "/home/patrick/Dropbox/electronics/kicad_libraries/ESP32_devkit_34pin",
-    "last_footprint_lib_dir": "/home/patrick/Dropbox/electronics/kicad_libraries/ESP32_devkit_38pin_2",
+    "last_footprint_lib_dir": "/home/patrick/Dropbox/electronics/kicad_libraries",
     "last_imperial_units": 0,
     "last_metric_units": 1,
     "max_undo_items": 0,
@@ -452,6 +459,6 @@
     ]
   },
   "zones": {
-    "net_sort_mode": -1
+    "net_sort_mode": 1
   }
 }

@@ -159,9 +159,13 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+Shift+b exec "google-chrome --password-store=gnome"
+
 bindsym $sup+m exec --no-startup-id /usr/bin/autorandr --change
 for_window [title="KeePassX"] floating enable
-for_window [class="Calculator"] floating enable
+for_window [class="gnome-calculator"] floating enable
+for_window [class="evolution-alarm-notify"] floating enable
+# to find class name, run xprop from a terminal then click on the window you want to target
 
 bindsym Print exec flameshot gui -p ~/Pictures/Screenshots
 bindsym Shift+Print       exec flameshot full -p ~/Pictures/Screenshots
@@ -198,3 +202,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# get Chrome to use locally stored passwords
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
