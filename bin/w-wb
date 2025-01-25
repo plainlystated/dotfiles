@@ -1,0 +1,34 @@
+#!/bin/sh
+
+att() {
+	[ -n "${TMUX:-}" ] &&
+		tmux switch-client -t '=wb' ||
+		tmux attach-session -t '=wb'
+}
+
+if tmux has-session -t '=wb' 2> /dev/null; then
+	att
+	exit 0
+fi
+
+cd /home/patrick/repos/work/workbench
+
+tmux new-session -d -s wb -n vim
+tmux send-keys -t '=wb:=vim' 'nvim' Enter
+
+tmux new-window -d -t '=wb' -n 'exec'
+tmux select-window -t '=wb:=exec'
+tmux send-keys -t '=wb:=exec' 'docker compose run web bash' Enter
+tmux split-window -v
+
+tmux new-window -d -t '=wb' -n 'server'
+tmux select-window -t '=wb:=server'
+tmux send-keys -t '=wb:=server' 'docker compose up web' Enter
+tmux split-window -v
+tmux send-keys -t '=wb:=server' 'ngrok start --all' Enter
+
+
+tmux select-window -t '=wb:=vim'
+
+att
+

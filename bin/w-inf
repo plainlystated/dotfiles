@@ -1,0 +1,30 @@
+#!/bin/sh
+
+att() {
+	[ -n "${TMUX:-}" ] &&
+		tmux switch-client -t '=inf' ||
+		tmux attach-session -t '=inf'
+}
+
+if tmux has-session -t '=inf' 2> /dev/null; then
+	att
+	exit 0
+fi
+
+cd /home/patrick/repos/work/infrastructure
+
+tmux new-session -d -s inf -n vim
+tmux send-keys -t '=inf:=vim' 'nvim' Enter
+
+tmux new-window -d -t '=inf' -n 'exec'
+tmux select-window -t '=inf:=exec'
+tmux send-keys -t '=inf:=exec' "docker compose run k8s bash" Enter
+tmux send-keys -t '=inf:=exec' "k9s" Enter
+tmux split-window -v
+tmux send-keys -t '=inf:=exec' "docker compose run k8s bash" Enter
+tmux send-keys -t '=inf:=exec' "cd pods/production/workbench" Enter
+
+tmux select-window -t '=inf:=vim'
+
+att
+
